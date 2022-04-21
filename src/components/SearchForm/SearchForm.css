@@ -1,0 +1,102 @@
+.search-form {
+    border-bottom: 1px  solid #424242;
+    padding-bottom: 70px;
+}
+
+.search-form__element {
+    position: relative;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    background: #222222;
+    box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 9px;
+}
+
+.search-form__container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-right: 1px solid #505050;
+    padding-right: 20px;
+}
+
+.search-form__input {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    background-image: url("../../images/lens-dark.svg");
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    padding: 25px 0 25px 63px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.search-form__input:focus {
+    outline: none;
+}
+
+.search-form__button {
+    min-width: 80px;
+    min-height: 34px;
+    background-color: #4285F4;
+    background-image: url("../../images/lens.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    border-radius: 48px;
+    padding: 0;
+    transition: opacity .3s ease-out;
+}
+
+.search-form__button:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.search-form__filter-container {
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 830px) {
+    .search-form {
+        padding-bottom: 110px;
+    }
+
+    .search-form__element {
+        gap: 20px;
+    }
+
+    .search-form__filter-container {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .search-form__container {
+        border: 0;
+    }
+
+    .search-form__input {
+        background-image: none;
+        padding: 25px 0 25px 19px;
+    }
+    
+    .search-form__filter-container {
+        position: absolute;
+        margin: 0 auto;
+        width: 170px;
+        top: 120px;
+        left: 0;
+        right: 0;
+    }
+}

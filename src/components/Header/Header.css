@@ -2,8 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 18px 70px;
-    z-index: 1;
+    padding: 18px 70px;
 }
 
 .header__logo {
@@ -11,32 +10,22 @@
     background-image: url('../../images/logo.svg');
     width: 38px;
     height: 38px;
+    transition: opacity .3s ease-out;
 }
 
-.header__links {
-    display: flex;
-    gap: 16px;
-}
-
-.header__link {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.header__link_active {
-    font-weight: 500;
-}
-
-.header__burger-button {
-    width: 44px;
-    height: 44px;
-    border: 0;
-    background: url('../../images/burger.svg');
-}
-
-.header__burger-button:hover {
+.header__logo:hover {
+    opacity: .6;
     cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+    .header {
+        padding: 18px 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header {
+        padding: 18px 14px;
+    }
 }

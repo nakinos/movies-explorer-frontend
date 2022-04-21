@@ -1,28 +1,49 @@
-import './Navigation.css';
-import ProfileButton from '../ProfileButton/ProfileButton';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import "./Navigation.css";
+import ProfileButton from "../ProfileButton/ProfileButton";
+import { Link } from "react-router-dom";
+import SideMenu from "../SideMenu/SideMenu";
+import { Switch, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function Navigation({ isOpen, onCloseClick }) {
+function Navigation() {
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
-    const onOverlayClick = (evt) => {
-        if (evt.target === evt.currentTarget) onCloseClick();
-    };
+  const openSideMenu = () => {
+    setIsSideMenuOpen(true);
+  };
 
-    return (
-    <div className={`navigation ${isOpen && 'navigation_active'}`} onClick={onOverlayClick}>
-        <div className={`navigation__side-menu ${isOpen && 'navigation__side-menu_active'}`}>
-            <button className="navigation__close-button" type="button" aria-label="Закрыть" onClick={onCloseClick}></button>
-            <nav className='navigation__side-menu-nav'>
-                <ul className='navigation__side-menu-list'>
-                    <li>Главная</li>
-                    <li>Фильмы</li>
-                    <li>Сохранённые фильмы</li>
-                </ul>
-                <ProfileButton />
-            </nav>
+  const closeSideMenu = () => {
+    setIsSideMenuOpen(false);
+  };
+
+  return (
+    <Switch>
+      <Route path="/" exact>
+        <div className="navigation__login-container">
+          <Link to="/signup" className="navigation__signup">
+            Регистрация
+          </Link>
+          <Link to="/signin" className="navigation__signin">
+            Войти
+          </Link>
         </div>
-    </div>
-    );
+      </Route>
+      <Route path="*">
+        <nav className="navigation__links">
+          <NavLink className="navigation__link" to="/movies" exact activeClassName="navigation__link_active">
+            Фильмы
+          </NavLink>
+          <NavLink className="navigation__link" to="/saved-movies" exact activeClassName="navigation__link_active">
+            Сохраненнные фильмы
+          </NavLink>
+        </nav>
+        <ProfileButton className="navigation__profile-button" />
+        <button className="navigation__burger-button" onClick={openSideMenu}></button>
+        <SideMenu isOpen={isSideMenuOpen} onCloseClick={closeSideMenu} />
+      </Route>
+    </Switch>
+  );
 }
 
 export default Navigation;
