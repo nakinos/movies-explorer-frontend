@@ -1,0 +1,136 @@
+.about-project {
+    margin: 110px 70px;
+}
+
+.about-project__two-columns {
+    margin: 70px 0 110px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.about-project__text-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    margin: 0 0 26px;
+    padding: 0;
+}
+
+.about-project__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.about-project__schedule {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+}
+
+.about-project__week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-project__one-week {
+    width: 100%;
+    height: 36px;
+    background: #3DDC84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-project__four-week {
+    width: 100%;
+    height: 36px;
+    background: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-project__caption {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.about-project__caption_type_week-one {
+    color: #000;
+}
+
+.about-project__caption_type_undercaption {
+    color: #8B8B8B;
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 830px) {
+    .about-project {
+        margin: 90px 50px;
+    }
+
+    .about-project__two-columns {
+        margin-bottom: 93px;
+        gap: 30px;
+    }
+
+    .about-project__text-title {
+        margin-bottom: 22px;
+    }
+
+    .about-project__text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .about-project__schedule {
+        grid-template-columns: 140px 1fr;
+    }
+
+    .about-project__caption {
+        font-weight: 400;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .about-project {
+        margin: 70px 18px;
+    }
+
+    .about-project__two-columns {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        flex-direction: column;
+        gap: 56px;
+    }
+
+    .about-project__text-title {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+
+    .about-project__schedule {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .about-project__caption {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .about-project__caption_type_undercaption {
+        margin-top: 10px;
+    }
+}

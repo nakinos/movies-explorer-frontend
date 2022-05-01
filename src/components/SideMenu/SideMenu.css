@@ -1,0 +1,89 @@
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, .3);
+    justify-content: flex-end;
+    visibility: hidden;
+    transition: visibility 1s ease-in-out;
+    z-index: 10;
+}
+
+.side-menu_active {
+    visibility: visible;
+}
+
+.side-menu__container {
+    position: relative;
+    background-color: #202020;
+    width: 100%;
+    max-width: 520px;
+    height: 100%;
+    right: -520px;
+    transition: right 1s ease-in-out;
+}
+
+.side-menu__container_active {
+    right: 0;
+}
+
+.side-menu__close-button {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    width: 31px;
+    height: 31px;
+    background: url('../../images/cross.svg');
+    background-position: center;
+    background-size: cover;
+    border: 0;
+    padding: 0;
+}
+
+.side-menu__close-button:hover {
+    cursor: pointer;
+}
+
+.side-menu__nav {
+    position: relative;
+    top: 160px;
+    bottom: 90px;
+    height: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.side-menu__link {
+    text-decoration: none;
+    color: #fff;
+    transition: opacity .3s ease-out;
+}
+
+.side-menu__link:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.side-menu__link_active {
+    text-decoration:underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+}
