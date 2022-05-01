@@ -4,7 +4,7 @@ const MOVIES_ERROR =
 const MOVIES_ZERO = "Ничего не найдено";
 
 const MOVIES_API_URL = "https://api.nomoreparties.co";
-const MAIN_API_URL = "http://127.0.0.1:3001";
+const MAIN_API_URL = "https://api.nakinos.movies.nomoredomains.work";
 
 const RENDER_LENGTH_1280 = 12;
 const RENDER_LENGTH_768 = 8;

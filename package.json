@@ -12,7 +12,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "deploy": "scp -r ./build/* nakinos@51.250.1.38:/home/nakinos/movie-frontend"
   },
   "eslintConfig": {
     "extends": [
