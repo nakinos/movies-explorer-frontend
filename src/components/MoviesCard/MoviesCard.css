@@ -4,10 +4,16 @@
     background: #222222;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
     border-radius: 6px;
+    overflow: hidden;
 }
 
 .movies-card:hover .movies-card__button_type_delete {
     visibility: visible;
+}
+
+.movies-card__link {
+    text-decoration: none;
+    color: #fff;
 }
 
 .movies-card__image {
